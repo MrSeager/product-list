@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:400,600,700&display=swap');
+
+body {
+    font-family: 'Red Hat Text', sans-serif !important;
+}
+
+.cs-pos {
+    transform: translate(-50%, 50%);
+    bottom: 0%;
+    left: 50%;
+}
+
+.cs-transition {
+    transition: .5s !important;
+}
+
+/*Background*/
+.cs-bg-one {
+    background-color: hsl(13, 31%, 94%) !important;
+}
+
+/*Font*/
+.cs-fw-600 {
+    font-weight: 600 !important;
+}
+
+.cs-fw-700 {
+    font-weight: 700 !important;
+}
+
+.cs-fc-one {
+    color: hsl(14, 65%, 9%) !important;
+}
+
+.cs-fc-two {
+    color: hsl(12, 20%, 44%) !important;
+}
+
+.cs-fc-three {
+    color: hsl(14, 86%, 42%) !important;
+}
+
+/*Buttons*/
+.cs-btn {
+    border-color: hsl(14, 65%, 9%) !important;
+    color: hsl(14, 65%, 9%) !important;
+}
+
+.cs-btn:hover {
+    border-color: hsl(14, 86%, 42%) !important;
+    color: hsl(14, 86%, 42%) !important;
+}

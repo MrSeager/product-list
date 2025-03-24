@@ -19,6 +19,19 @@ body {
     background-color: hsl(13, 31%, 94%) !important;
 }
 
+.cs-bg-two {
+    background-color: hsl(14, 86%, 42%) !important;
+}
+
+/*Border*/
+.cs-border {
+    border: solid 2px transparent !important;
+}
+
+.cs-border-red {
+    border: solid 2px hsl(14, 86%, 42%) !important;
+}
+
 /*Font*/
 .cs-fw-600 {
     font-weight: 600 !important;
@@ -48,5 +61,15 @@ body {
 
 .cs-btn:hover {
     border-color: hsl(14, 86%, 42%) !important;
+    color: hsl(14, 86%, 42%) !important;
+}
+
+.cs-btn-two {
+    aspect-ratio: 1/1 !important;
+    border-color: white !important;
+}
+
+.cs-btn-two:hover {
+    background-color: white !important;
     color: hsl(14, 86%, 42%) !important;
 }

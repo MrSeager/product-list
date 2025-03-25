@@ -23,6 +23,10 @@ body {
     background-color: hsl(14, 86%, 42%) !important;
 }
 
+.cs-bg-three {
+    background-color: hsl(20, 50%, 98%) !important;
+}
+
 /*Border*/
 .cs-border {
     border: solid 2px transparent !important;
@@ -53,6 +57,10 @@ body {
     color: hsl(14, 86%, 42%) !important;
 }
 
+.cs-fs-7 {
+    font-size: .8em !important;
+}
+
 /*Buttons*/
 .cs-btn {
     border-color: hsl(14, 65%, 9%) !important;
@@ -72,4 +80,23 @@ body {
 .cs-btn-two:hover {
     background-color: white !important;
     color: hsl(14, 86%, 42%) !important;
+}
+
+.cs-btn-close {
+    aspect-ratio: 1/1 !important;
+    color: hsl(12, 20%, 44%) !important;
+    border: solid 2px hsl(12, 20%, 44%) !important;
+}
+
+.cs-btn-close:hover {
+    color: hsl(14, 65%, 9%) !important;
+    border: solid 2px hsl(14, 65%, 9%) !important;
+}
+
+.cs-btn-confirm {
+    background-color: hsl(14, 86%, 42%) !important;
+}
+
+.cs-btn-confirm:hover {
+    background-color: hsl(14, 85%, 35%) !important;
 }

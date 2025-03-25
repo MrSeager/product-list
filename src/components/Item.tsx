@@ -62,6 +62,7 @@ const Item: FC<ItemProps> = ({ item, basketItems, setBasketItems }) => {
                     sum: item.price,
                 };
                 setBasketItems([...basketItems, newItem]);
+                setAmount(1);
             }
         }
     };

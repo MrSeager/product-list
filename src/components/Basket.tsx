@@ -2,7 +2,7 @@ import React, { FC, useState, useEffect } from 'react';
 //Components
 import BasketItem from './BasketItem.tsx';
 //Bootstrap
-import { Container, Row, Col, Image, Button } from 'react-bootstrap';
+import { Container, Col, Image, Button } from 'react-bootstrap';
 //Spring
 import { useSpring, animated } from '@react-spring/web';
 //Images
@@ -25,21 +25,17 @@ interface itemsProp {
 
 interface BasketProps {
     basketItems: itemsProp[];
+    itemsSum: number;
     setBasketItems: (basketItems: itemsProp[]) => void;
+    handleShow: () => void;
 }
 
-const Basket: FC<BasketProps> = ({ basketItems, setBasketItems }) => {
+const Basket: FC<BasketProps> = ({ basketItems, itemsSum, setBasketItems, handleShow }) => {
     const [itemsAmount, setItemsAmount] = useState<number>(0);
-    const [itemsSum, setItemsSum] = useState<number>(0.00);
     
     useEffect(() => {
         const totalAmount = basketItems.reduce((sum, item) => sum + item.amount, 0);
         setItemsAmount(totalAmount);
-    }, [basketItems]);
-
-    useEffect(() => {
-        const totalSum = basketItems.reduce((sum, item) => sum + item.sum, 0);
-        setItemsSum(totalSum);
     }, [basketItems]);
 
     const handleDeleteItem = (index: number) => {
@@ -78,7 +74,7 @@ const Basket: FC<BasketProps> = ({ basketItems, setBasketItems }) => {
                                 <Image fluid src={TreeImg} alt='tree img' />
                                 <p className='cs-fs-7 m-0'>This is a <b>carbon-neutral</b> delivery</p>
                             </Container>
-                            <Button className='rounded-pill py-2 border-0 cs-btn-confirm cs-transition'>Confirm Order</Button>
+                            <Button onClick={handleShow} className='rounded-pill py-2 border-0 cs-btn-confirm cs-transition'>Confirm Order</Button>
                         </Container>
                     ) : ''}
                 </Container>

@@ -3,8 +3,6 @@ import React, { FC, useState } from 'react';
 import './ProductListStyle.css';
 //Bootstrap
 import { Container, Col, Image, Button } from 'react-bootstrap';
-//Spring
-import { useSpring, animated } from '@react-spring/web';
 //Images
 import BasketImg from '../assets/images/icon-add-to-cart.svg';
 
@@ -112,7 +110,7 @@ const Item: FC<ItemProps> = ({ item, basketItems, setBasketItems }) => {
                     fluid 
                     src={'https://raw.githubusercontent.com/MrSeager/product-list/refs/heads/main/src' + item.image.desktop.replace('.', '')} 
                     alt='item image'
-                    className={`cs-transition rounded rounded-3 cs-border${switchBtn ? '-red' : ''}`}
+                    className={`w-100 cs-transition rounded rounded-3 cs-border${switchBtn ? '-red' : ''}`}
                 />
                 {!switchBtn ?
                 <Button onClick={() => setSwitchBtn(true)} className='position-absolute rounded-pill bg-white cs-fw-600 cs-btn cs-pos py-2 w-50 cs-transition'><Image src={BasketImg} alt='basket ing' /> Add to Cart</Button>

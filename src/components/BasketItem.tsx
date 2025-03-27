@@ -1,10 +1,8 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC } from 'react';
 //Components
 import './ProductListStyle.css';
 //Bootstrap
-import { Container, Row, Col, Image, Button } from 'react-bootstrap';
-//Spring
-import { useSpring, animated } from '@react-spring/web';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 interface BasketItemProps {
     name: string;
@@ -25,7 +23,7 @@ const BasketItem: FC<BasketItemProps> = ({ name, amount, price, sum, onDelete })
                     <p className='cs-fw-600 cs-fc-two'>${sum.toFixed(2)}</p>
                 </Container>
             </Col>
-            <Col xs={2} className='d-flex flex-column align-items-center justify-content-center'>
+            <Col xs={2} className='d-flex flex-column align-items-end px-0 justify-content-center'>
                 <Button onClick={onDelete} className='cs-btn-close cs-transition bg-transparent p-0 rounded-circle'>&#x2716;</Button>
             </Col>
         </Container>

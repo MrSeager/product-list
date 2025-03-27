@@ -43,9 +43,16 @@ const Basket: FC<BasketProps> = ({ basketItems, itemsSum, setBasketItems, handle
         setBasketItems(updatedItems); // Update the basket state
     };
 
+    const anim = useSpring ({
+        from: { x: '200px', opacity: 0 },
+        to: { x: '0px', opacity: 1 },
+        config: { tension: 110, friction: 10 },
+        delay: 200
+    });
+
     return (
-        <Col lg={3} xs={12} className='p-lg-3 p-0'>
-            <Container className='bg-white p-4 rounded rounded-3 w-100'>
+        <Col lg={3} xs={12} className='px-lg-3 p-0'>
+            <animated.div style={anim} className='bg-white p-4 rounded rounded-3'>
                 <h4 className='h5 mb-3 w-100 cs-fc-three cs-fw-700'>Your Cart ({itemsAmount})</h4>
                 <Container className='px-0 d-flex flex-column gap-3'>
                     {basketItems.length > 0 ? (
@@ -78,7 +85,7 @@ const Basket: FC<BasketProps> = ({ basketItems, itemsSum, setBasketItems, handle
                         </Container>
                     ) : ''}
                 </Container>
-            </Container>
+            </animated.div>
         </Col>
     );
 }
